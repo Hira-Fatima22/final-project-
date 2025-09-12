@@ -1,0 +1,45 @@
+/* ====== styles.css (revamped) ====== */
+
+/* Reset & base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  color: #333;
+  background: linear-gradient(to bottom right, #fdfdfd, #eef8f7);
+  line-height: 1.7;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(135deg, #1a535c, #4ecdc4);
+  color: #fff;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  animation: fadeDown 0.8s ease-in-out;
+}
+
+/* H1 inside header */
+h1 {
+  font-family: "Merriweather", Georgia, serif;
+  font-size: 2.2rem;
+  color: #fff;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* NAV */
+nav {
+  background: rgba(255,255)
+}
