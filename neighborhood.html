@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Neighborhood — Gallery</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><span class="brand-text">My Neighborhood</span></a>
+      <nav class="main-nav" role="navigation" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="neighborhood.html" aria-current="page">Neighborhood</a></li>
+          <li><a href="parks.html">Parks</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container" tabindex="-1">
+    <header class="page-header">
+      <h1>Neighborhood Gallery</h1>
+      <p>Five images showcasing local places. Replace these images with your own photos.</p>
+    </header>
+
+    <section class="gallery" aria-label="Neighborhood images">
+      <figure><img src="images/neigh-1.jpg" alt="Corner cafe"><figcaption>Corner cafe</figcaption></figure>
+      <figure><img src="images/neigh-2.jpg" alt="Local bakery"><figcaption>Local bakery</figcaption></figure>
+      <figure><img src="images/neigh-3.jpg" alt="Community mural"><figcaption>Community mural</figcaption></figure>
+      <figure><img src="images/neigh-4.jpg" alt="Bookstore window"><figcaption>Bookstore window</figcaption></figure>
+      <figure><img src="images/neigh-5.jpg" alt="Quiet side street"><figcaption>Quiet side street</figcaption></figure>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year2"></span> — Hira</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year2').textContent = new Date().getFullYear();</script>
+</body>
+</html>

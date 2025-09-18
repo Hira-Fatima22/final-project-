@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Neighborhood — Home</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo-placeholder.png" alt="" class="brand-logo" aria-hidden="true">
+        <span class="brand-text">My Neighborhood</span>
+      </a>
+
+      <nav class="main-nav" role="navigation" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="neighborhood.html">Neighborhood</a></li>
+          <li><a href="parks.html">Parks</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container main-grid" tabindex="-1">
+    <section class="hero">
+      <div class="hero-copy">
+        <h1>Welcome to the neighborhood</h1>
+        <p>Discover local spots, parks, and small businesses — designed to be accessible, responsive, and pleasant to use.</p>
+        <p><a class="btn-primary" href="neighborhood.html">View the gallery</a> <a class="btn-ghost" href="parks.html">See parks</a></p>
+      </div>
+
+      <figure class="hero-image img-box" aria-hidden="true">
+        <img src="images/hero.jpg" alt="Main street with trees and shops">
+        <figcaption class="visually-hidden">Main street</figcaption>
+      </figure>
+    </section>
+
+    <section class="features" aria-labelledby="features-title">
+      <h2 id="features-title">Quick links</h2>
+      <div class="feature-cards">
+        <article class="feature">
+          <h3>Local gallery</h3>
+          <p>Photos from around the neighborhood — click through to the gallery page.</p>
+          <a class="link-arrow" href="neighborhood.html">Open gallery</a>
+        </article>
+
+        <article class="feature">
+          <h3>Parks & Trails</h3>
+          <p>Family-friendly parks with walking trails and picnic areas.</p>
+          <a class="link-arrow" href="parks.html">Explore parks</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> — Hira • Built for class</p>
+    </div>
+  </footer>
+
+  <script>
+    // small helpers: year + mobile nav toggle (accessible)
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const toggle = document.querySelector('.nav-toggle');
+    const navList = document.getElementById('nav-list');
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      navList.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
